@@ -1,0 +1,71 @@
+UIWidget:
+
+<UIWidget>:
+    canvas.before:
+        Color:
+            rgba: 0.6, 0.6, 0.6, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        BoxLayout:
+            size_hint_y: 1.0
+            padding: 20,30,20,50
+
+            Label:
+                id: label1
+                text: "実験番号"
+            TextInput:
+                id: text1
+                multiline: False
+                halign: 'center'
+
+            Label:
+                id: label2
+                text: "歩行速度"
+            TextInput:
+                id: text2
+                multiline: False
+                halign: 'center'
+
+        BoxLayout:
+            size_hint_y: 1.0
+            padding: 20,30,20,50
+
+            Label:
+                id: label3
+                text: "被験者番号"
+            TextInput:
+                id: text3
+                multiline: False
+                halign: 'center'
+            Label:
+                id: label4
+                text: "距離"
+            TextInput:
+                id: text4
+                multiline: False
+                halign: 'center'
+
+        BoxLayout:
+            size_hint_y: 2.0
+            padding: 20,30,20,100
+            Button:
+                id: button1
+                text: "Start"
+                font_size: 30
+                on_press: root.buttonStart()
+            Button:
+                id: button2
+                text: "Notice"
+                font_size: 30
+                on_press: root.buttonNotice()
+            Button:
+                id: button3
+                text: "Finish"
+                font_size: 30
+                on_press: root.buttonFinish()
