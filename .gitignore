@@ -1,2 +1,5 @@
 # 実験データはリポジトリに保存しない
 Data/Records/***/**/*.csv
+
+# vscodeの設定ファイル
+.vscode

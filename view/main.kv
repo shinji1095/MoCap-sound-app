@@ -1,0 +1,18 @@
+#:kivy 2.2.0
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        DepthPreview:
+            size_hint_y:3.0
+            BoxLayout:
+                orientation:'vertical'
+                Label:
+                    id:hist_label
+                    text:'あああ'
+                    color: 1, 1, 1, 1
+        ControlWidget:
+            size_hint_y:1.0
+
+        

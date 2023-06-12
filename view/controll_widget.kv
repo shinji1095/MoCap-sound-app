@@ -1,0 +1,77 @@
+#:kivy 2.2.0
+<ControlWidget>
+    label1: label1
+    label2: label2
+    label3: label3
+    label4: label4
+    input1: text1
+    input2: text2
+    input3: text3
+    input4: text4
+
+    canvas.before:
+        Color:
+            rgba: 0.6, 0.6, 0.6, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation:'vertical'
+        # 入力部分
+        BoxLayout:
+            orientation:'vertical'
+            BoxLayout:
+                orientation:'horizontal'
+
+                Label:
+                    id: label1
+                    text: "実験番号"
+                TextInput:
+                    id: text1
+                    multiline: False
+                    halign: 'center'
+
+                Label:
+                    id: label2
+                    text: "歩行速度"
+                TextInput:
+                    id: text2
+                    multiline: False
+                    halign: 'center'
+
+            BoxLayout:
+                orientation:'horizontal'
+
+                Label:
+                    id: label3
+                    text: "被験者番号"
+                TextInput:
+                    id: text3
+                    multiline: False
+                    halign: 'center'
+                Label:
+                    id: label4
+                    text: "距離"
+                TextInput:
+                    id: text4
+                    multiline: False
+                    halign: 'center'
+
+        BoxLayout:
+            orientation:'horizontal'
+            Button:
+                id: button1
+                text: "Start"
+                font_size: 30
+                on_press: root.buttonStart()
+            Button:
+                id: button2
+                text: "Notice"
+                font_size: 30
+                on_press: root.buttonNotice()
+            Button:
+                id: button3
+                text: "Finish"
+                font_size: 30
+                on_press: root.buttonFinish()
